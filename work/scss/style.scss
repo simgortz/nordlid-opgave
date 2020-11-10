@@ -14,9 +14,12 @@
 @import "../bootstrap/scss/card";
 
 // Extra
+@import "../bootstrap/scss/carousel";
+@import "../bootstrap/scss/forms";
 
 
 // My style
+// @import "reset";
 @import "variables";
 @import "mixins";
 @import "main";
