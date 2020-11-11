@@ -11,12 +11,31 @@ p{
 body{
     background-color: $colorCustomWhite;
 
+    .nordlid-logo{
+        padding: 25px 0;
+    }
 
     #carouselFrontpage{
         padding: 0;
+        margin: 0 -15px;
         .carousel-caption{
+            display: flex;
             max-width: $layoutContentMaxWidth;
             margin: auto;
+            top: 0;
+            align-items: center;
+            padding: 0 15px;
+            h1{
+                text-align: left;
+                @media only screen and (max-width: 768px) {
+                    font-size: 26px;
+                }
+            }
+        }
+        .carousel-item img{
+            min-height: 300px;
+            max-height: 500px;
+            object-fit: cover;
         }
     }
 
@@ -27,6 +46,11 @@ body{
 
         h2{
             font-size: 36px;
+            margin-bottom: 30px;
+            
+            @media only screen and (max-width: 768px) {
+                font-size: 26px;
+            }
         }
         
     }
@@ -69,6 +93,24 @@ body{
         left: 45px;
         font-size: 12px;
     }
+    @media only screen and (min-width: 768px) {
+        height: 60px;
+    }
+    @media only screen and (max-width: 500px) {
+        height: 60px;
+    }
+    @media only screen and (max-width: 360px) {
+        height: 75px;
+    }
+    @media only screen and (max-width: 295px) {
+        height: 90px;
+    }
+}
+
+.flex-reverse{
+    @media only screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+    }
 }
 
 .was-validated .form-control:invalid{
@@ -87,9 +129,10 @@ body{
     width: 50%;
     height: 50px;
     font-weight: bold;
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 767px) {
         width: 100%;
     }
+    margin-bottom: 15px;
 }
 
 .frontpage-icon{

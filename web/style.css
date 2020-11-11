@@ -3509,13 +3509,43 @@ body {
   background-color: #f1f3f5;
 }
 
+body .nordlid-logo {
+  padding: 25px 0;
+}
+
 body #carouselFrontpage {
   padding: 0;
+  margin: 0 -15px;
 }
 
 body #carouselFrontpage .carousel-caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   max-width: 1050px;
   margin: auto;
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+}
+
+body #carouselFrontpage .carousel-caption h1 {
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  body #carouselFrontpage .carousel-caption h1 {
+    font-size: 26px;
+  }
+}
+
+body #carouselFrontpage .carousel-item img {
+  min-height: 300px;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body .content-wrapper {
@@ -3525,6 +3555,13 @@ body .content-wrapper {
 
 body .content-wrapper h2 {
   font-size: 36px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  body .content-wrapper h2 {
+    font-size: 26px;
+  }
 }
 
 body .form-control {
@@ -3570,6 +3607,39 @@ body .form-control {
   font-size: 12px;
 }
 
+@media only screen and (min-width: 768px) {
+  .custom-control {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .custom-control {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .custom-control {
+    height: 75px;
+  }
+}
+
+@media only screen and (max-width: 295px) {
+  .custom-control {
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .flex-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .was-validated .form-control:invalid {
   border-color: #e6007e;
 }
@@ -3585,9 +3655,10 @@ body .form-control {
   width: 50%;
   height: 50px;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 767px) {
   .btn-secondary {
     width: 100%;
   }
